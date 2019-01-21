@@ -7,7 +7,7 @@ import retrofit2.http.Query;
 
 public interface MercedesCarConfigurationInterface {
 
-    @GET("?")
+    @GET("initial?")
     Call<Configuration> getConfiguration(@Query("apikey") String api_key);
 
 }

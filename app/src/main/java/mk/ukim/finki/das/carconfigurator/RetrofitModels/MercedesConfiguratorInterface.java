@@ -9,7 +9,7 @@ import retrofit2.http.Query;
 
 public interface MercedesConfiguratorInterface {
 
-    @GET("configurator/v1/markets")
+    @GET("configurator/v1/markets?language=en")
     Call<List<ConfigurationCountries>> countriesGetter(@Query("apikey") String api_key);
 
 }

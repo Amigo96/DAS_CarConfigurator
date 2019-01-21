@@ -90,7 +90,7 @@ public class ClassActivity extends AppCompatActivity {
 
     private void getResultsFromAPICall(MercedesConfigurationClassesInterface service){
 
-        service.getClasses("f93bf5c8-7b74-4a9f-9dfb-345c3f7f0dcf").enqueue(new Callback<List<MercedesClasses>>() {
+        service.getClasses("636fa4d1-dfbf-4a78-a260-0215e51b3879").enqueue(new Callback<List<MercedesClasses>>() {
             @Override
             public void onResponse(Call<List<MercedesClasses>> call, Response<List<MercedesClasses>> response) {
                 if(response.isSuccessful()){
