@@ -30,5 +30,12 @@
     <!--Diler: 9c4df673-fca7-456b-ac70-c545749f179e-->
     <!--Configuration: d61dfa52-7db8-4688-ac7f-a7246b96c26b-->
 
+    <!--IVAN-->
+    <string name="rim">RIM</string>
+    <string name="trim">TRIM</string>
+    <string name="paint">PAINT</string>
+    <string name="todo">TODO</string>
+    <string name="gallery">GALLERY</string>
+    <string name="engine">ENGINE</string>
 
 </resources>

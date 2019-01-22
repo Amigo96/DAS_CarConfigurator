@@ -5,6 +5,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class MercedesClasses {
 
+    @SerializedName("classId")
+    @Expose
+    private String classId;
+
     @SerializedName("className")
     @Expose
     private String className;
@@ -21,4 +25,5 @@ public class MercedesClasses {
         return links;
     }
 
+    public String getClassId() {return classId; }
 }

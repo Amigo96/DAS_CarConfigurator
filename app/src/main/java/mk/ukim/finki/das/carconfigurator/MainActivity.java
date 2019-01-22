@@ -1,6 +1,7 @@
 package mk.ukim.finki.das.carconfigurator;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -171,8 +172,11 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_configurator) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-
+            Intent intent = new Intent(MainActivity.this,Gallery_Screen.class);
+            startActivity(intent);
         } else if (id == R.id.nav_news) {
+        Intent intent1 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.mercedes-benz.com/news"));
+            startActivity(intent1);
 
         } else if (id == R.id.nav_dealer) {
                     Intent classActivity = new Intent(this, MainActivity_boki.class);
@@ -261,8 +265,8 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void getResultsFromAPICallCarModel(MercedesConfigurationModels service) {
-//                R.string.configurator_api_key
-        service.getModels("190", this.API_KEY).enqueue(new Callback<List<Model>>() {
+//                R.string.configurator_api_key |  "190" classID
+        service.getModels( selectedClass.getClassId(), this.API_KEY).enqueue(new Callback<List<Model>>() {
             @Override
             public void onResponse(Call<List<Model>> call, Response<List<Model>> response) {
                 if (response.isSuccessful()) {
@@ -342,6 +346,9 @@ public class MainActivity extends AppCompatActivity
 
                     MercedesClasses classObject = findClassObject(carClass);
                     selectedClass = classObject;
+
+                    System.out.println("MercedesClassObject -> classId: " + selectedClass.getClassId());
+
                     OkHttpClient client = httpClient.build();
 
 //                    Create Car Models!!
@@ -392,7 +399,7 @@ public class MainActivity extends AppCompatActivity
 
 //                    Create Car Models!!
                     System.out.println("mrk-> MOOODEL  ulr : " + modelObject.getModelLinks().getConfigurationLink());
-                    System.out.println("mrk-> MOOODEL  URL - 2 : " + modelObject.getModelLinks().getSelfLink());
+//                    System.out.println("mrk-> MOOODEL  URL - 2 : " + modelObject.getModelLinks().getSelfLink());
                     //                    "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models?bodyId=1 formatModelLink(modelObject.getModelLinks().getConfigurationLink())
 //                    https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/190378_000/configurations/
                     Retrofit retrofit = creator.createService( "https://api.mercedes-benz.com/configurator/v1/markets/de_DE/models/190378_000/configurations/" , client); //"https://api.mercedes-benz.com/configurator/v1/markets/de_DE/classes/"
