@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">CarConfiguratorFinal</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_gallery">Gallery</string>
+    <string name="textViewCompatSpinner"></string>
+
+    <!-- Api key -->
+    <string name="api_key1_configuration">d61dfa52-7db8-4688-ac7f-a7246b96c26b</string>
+    <string name="api_key2_configuration"></string>
+    <string name="api_key3_configuration"></string>
+
+    <string name="api_key1_dealer">27ea6a7d-e247-480c-868b-c1fb8610c97b</string>
+
+    <!-- Menu names-->
+    <string name="car_dealer">Dealer</string>
+    <string name="car_gallery">Gallery</string>
+    <string name="car_news">News</string>
+
+    <!-- Gallery -->
+    <string name="rim">RIM</string>
+    <string name="trim">TRIM</string>
+    <string name="paint">PAINT</string>
+    <string name="todo">TODO</string>
+    <string name="gallery">GALLERY</string>
+    <string name="engine">ENGINE</string>
+
+    <!-- Gallery texts -->
+    <string name="subtitle">GALLERY</string>
+    <string name="engine_title">Engine</string>
+    <string name="paint_title">Paint</string>
+    <string name="rim_title">Rim</string>
+    <string name="trim_title">Trim</string>
+
+</resources>
